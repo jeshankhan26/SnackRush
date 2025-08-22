@@ -1,62 +1,81 @@
-# 🪑 FurniSpace (Next.js + MongoDB)
+# SnackRush 🍔🍕🌭
 
-A modern furniture e-commerce web application built with **Next.js 15 (App Router)**, **MongoDB**, and **TailwindCSS/DaisyUI**.  
-It allows users to browse products, view details, and authenticated users can add new products from a protected dashboard.
-
----
-
-## 🚀 Features
-
-- Browse all available products from the database
-- View individual product details
-- Authentication (NextAuth.js)
-- Protected **Route** for managing products
-- Add products dynamically (stored in MongoDB)
+A simple fast-food web application built with **Next.js 15** using the **App Router**. SnackRush allows users to browse products, view details, and manage products after authentication using **NextAuth.js**.
 
 ---
 
-## 🛠️ Setup & Installation
+## Live Demo
 
-### 1. Clone the repository
+[SnackRush Live](https://snack-rush.vercel.app/)
 
+## Repository
+
+[GitHub Repository](https://github.com/jeshankhan26/SnackRush.git)
+
+---
+
+## Project Description
+
+SnackRush is a fast-food application where users can:
+
+- View a landing page with product highlights
+- Explore detailed information about each product
+- Log in using social (Google) or credential-based authentication
+- Access a protected dashboard to add new products after logging in
+
+This project demonstrates **Next.js 15 features**, **NextAuth.js authentication**, and **protected routes** for a full-stack experience.
+
+---
+
+## Core Features
+
+### 1. Landing Page (`/`)
+- Contains: Navbar, Hero section, Product Highlights, Footer
+- Navigation links to **Login** and **Products**
+- Publicly accessible (no login required)
+
+### 2. Login Page (`/login`)
+- Implemented with **NextAuth.js**
+- Supports social login (Google) or credentials
+- Redirects users to `/products` after successful login
+
+### 3. Product List Page (`/products`)
+- Publicly accessible
+- Fetches products from a mock backend or file
+- Each product shows:
+  - Name
+  - Description
+  - Price
+  - Details button
+
+### 4. Product Details Page (`/products/[id]`)
+- Displays full details of a single product
+- Publicly accessible
+
+### 5. Protected Page: Add Product (`/dashboard/add-product`)
+- Only accessible when logged in
+- Form to add a new product and save it to the database
+- Redirects unauthenticated users to `/login`
+
+---
+
+## Optional Enhancements
+- Loading spinner when submitting forms
+- Toast notifications on successful product addition
+- Light/Dark theme toggle
+
+---
+
+## Technologies Used
+- **Next.js 15** (App Router)
+- **NextAuth.js** (Authentication)
+- **Route Handlers (`/api`)** for backend
+- Optional: Express.js server for fetching/creating product data
+
+---
+
+## Setup & Installation
+
+1. **Clone the repository**
 ```bash
-git clone https://github.com/MughniRayhan/FurniSpace
-cd furni-space
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Configure environment variables
-
-Create a .env.local file in the root with the following:
-
-MONGODB_URI=your_mongodb_connection_string
-DB_NAME=your_mongodb_db_name
-NEXTAUTH_SECRET=your_random_generated_secret
-
-### 4. Run the development server
-
-```bash
-npm run dev
-```
-
-| Route                    | Description                                           |
-| ------------------------ | ----------------------------------------------------- |
-| `/`                      | Home page (intro, highlights, navigation)             |
-| `/products`              | Displays all products from `test_products` collection |
-| `/products/[id]`         | Dynamic product details page                          |
-| `/login`                 | Login page (NextAuth.js)                              |
-| `/register`              | register page (NextAuth.js)                           |
-| `/dashboard/add-product` | Protected form to add new products                    |
-| `/api/products`          | API endpoint to add products (POST)                   |
-
-📌 Tech Stack
-
-Frontend: Next.js 15, React, TailwindCSS, DaisyUI
-Backend: Next.js API routes, MongoDB
-Auth: NextAuth.js
-Database: MongoDB Atlas
+git clone https://github.com/jeshankhan26/SnackRush.git
