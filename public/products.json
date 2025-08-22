@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Modern Wooden Chair",
+    "slug": "modern-wooden-chair",
+    "price": 65,
+    "category": "Chairs",
+    "image": "/products/wooden-chair.jpg",
+    "description": "Ergonomic wooden chair with a minimalist design, perfect for dining or study rooms.",
+    "tags": ["chair", "wood", "minimal"],
+    "featured": true
+  },
+  {
+    "title": "Classic Leather Sofa",
+    "slug": "classic-leather-sofa",
+    "price": 450,
+    "category": "Sofas",
+    "image": "/products/leather-sofa.jpg",
+    "description": "Comfortable 3-seater leather sofa with timeless design, available in dark brown.",
+    "tags": ["sofa", "leather", "living-room"],
+    "featured": true
+  },
+  {
+    "title": "Glass Coffee Table",
+    "slug": "glass-coffee-table",
+    "price": 120,
+    "category": "Tables",
+    "image": "/products/glass-coffee-table.jpg",
+    "description": "Elegant glass-top coffee table with steel legs, suitable for modern interiors.",
+    "tags": ["table", "coffee", "glass"],
+    "featured": false
+  },
+  {
+    "title": "Minimalist Study Desk",
+    "slug": "minimalist-study-desk",
+    "price": 180,
+    "category": "Desks",
+    "image": "/products/study-desk.jpg",
+    "description": "Spacious wooden study desk with cable management and storage drawers.",
+    "tags": ["desk", "study", "workspace"],
+    "featured": true
+  },
+  {
+    "title": "King Size Bed Frame",
+    "slug": "king-size-bed-frame",
+    "price": 600,
+    "category": "Beds",
+    "image": "/products/king-bed.jpg",
+    "description": "Solid oak king size bed frame with a modern headboard design.",
+    "tags": ["bed", "oak", "bedroom"],
+    "featured": true
+  },
+  {
+    "title": "Bookshelf with 5 Tiers",
+    "slug": "bookshelf-5-tiers",
+    "price": 95,
+    "category": "Storage",
+    "image": "/products/bookshelf.jpg",
+    "description": "Tall bookshelf with 5 open shelves, perfect for books and decor items.",
+    "tags": ["bookshelf", "storage", "wood"],
+    "featured": false
+  },
+  {
+    "title": "Dining Table Set (4 Chairs)",
+    "slug": "dining-table-set-4-chairs",
+    "price": 350,
+    "category": "Dining",
+    "image": "/products/dining-set.jpg",
+    "description": "Compact dining table with 4 matching chairs, made from solid wood.",
+    "tags": ["dining", "table", "set"],
+    "featured": false
+  },
+  {
+    "title": "Recliner Armchair",
+    "slug": "recliner-armchair",
+    "price": 220,
+    "category": "Chairs",
+    "image": "/products/recliner.jpg",
+    "description": "Comfortable recliner armchair with adjustable backrest and footrest.",
+    "tags": ["chair", "recliner", "comfort"],
+    "featured": true
+  }
+]
