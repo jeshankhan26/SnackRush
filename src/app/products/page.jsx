@@ -47,7 +47,18 @@ export default async function page() {
                      Price: ${product.price}
                    </p>
                  </div>
+                 <Link href={`/products/${product._id}`}>
+  <button
+    className="mt-4 w-full py-3 rounded-xl font-semibold border-2 border-transparent 
+               bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 
+               text-white shadow-lg hover:from-pink-600 hover:via-pink-700 hover:to-pink-800 
+               hover:scale-105 transition-all duration-300"
+  >
+    View Details
+  </button>
+</Link>
                </div>
+               
              ))}
            </div>
    

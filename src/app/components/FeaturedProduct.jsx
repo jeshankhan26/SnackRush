@@ -1,25 +1,27 @@
-import dbConnect, { collectionNamesObj } from '@/lib/dbConnect'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import dbConnect, { collectionNamesObj } from "@/lib/dbConnect";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export default async function FeaturedProduct() {
-  const productsCollection = await dbConnect(collectionNamesObj.productsCollection);
+  const productsCollection = await dbConnect(
+    collectionNamesObj.productsCollection
+  );
   const products = await productsCollection.find({}).toArray();
 
   return (
     <section className="w-full bg-gradient-to-r from-[#49111c] via-[#6e0d25] to-[#9e2a2b] py-16 md:py-24 text-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
-        
         {/* Section Title + Description */}
         <div className="text-center mb-14">
-             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-               Handpicked meals just for you.
-             </h2>
-             <p className="mt-4 text-gray-200 max-w-2xl mx-auto text-lg">
-               Discover hand-picked dishes crafted to bring flavor, freshness, and delight to your dining experience.
-             </p>
-           </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+            Handpicked meals just for you.
+          </h2>
+          <p className="mt-4 text-gray-200 max-w-2xl mx-auto text-lg">
+            Discover hand-picked dishes crafted to bring flavor, freshness, and
+            delight to your dining experience.
+          </p>
+        </div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -43,11 +45,23 @@ export default async function FeaturedProduct() {
               {/* Card Body */}
               <div className="p-6 space-y-3">
                 <h3 className="text-xl font-bold">{product.title}</h3>
-                <p className="text-sm text-gray-200 line-clamp-3">{product.description}</p>
+                <p className="text-sm text-gray-200 line-clamp-3">
+                  {product.description}
+                </p>
                 <p className="text-lg font-semibold text-pink-400">
                   Price: ${product.price}
                 </p>
               </div>
+              <Link href={`/products/${product._id}`}>
+                <button
+                  className="mt-4 w-full py-3 rounded-xl font-semibold border-2 border-transparent 
+               bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 
+               text-white shadow-lg hover:from-pink-600 hover:via-pink-700 hover:to-pink-800 
+               hover:scale-105 transition-all duration-300"
+                >
+                  View Details
+                </button>
+              </Link>
             </div>
           ))}
         </div>
