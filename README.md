@@ -59,12 +59,6 @@ This project demonstrates **Next.js 15 features**, **NextAuth.js authentication*
 
 ---
 
-## Optional Enhancements
-- Loading spinner when submitting forms
-- Toast notifications on successful product addition
-- Light/Dark theme toggle
-
----
 
 ## Technologies Used
 - **Next.js 15** (App Router)
